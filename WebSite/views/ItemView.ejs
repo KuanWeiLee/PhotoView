@@ -1,0 +1,41 @@
+
+<div class="jumbotron">
+<div class="container">
+      <div class="row">
+        <div class="clo-xs-12  col-sm-12 ">
+          <h1 >單張顯示</h1>
+          <P class="flicker">
+          從 DB 中找到對應的資料，點擊名稱可進行修改。
+          </P>
+        </div>  
+      </div>  
+    </div>
+</div>
+
+<div class="container">
+
+  <div class="thumbnail text-center">
+    <% 
+      if(item.name != "" || item.name != ''){%>
+        <a href="/edit/<%= item._id %>" title="點我可修改名稱"><h3><%= item.name %></h3></a>
+       <% } 
+      else{%>
+        <form action="/update/<%= item._id %>" method="post" accept-charset="utf-8">
+          <input type="text" name="content" placeholder="輸入名稱後按 Enter " />
+        </form>
+      <%  }
+    %>
+  </div>
+  
+ <div class="thumbnail text-center">
+  <% if(item.imgUrl != "" ){%>
+    <img src="<%= item.imgUrl %>" alt="" class="img-responsive" >
+  <% } 
+  else{%>
+     <img src="http://i.huffpost.com/gen/2847196/images/n-SORRY-large570.jpg" alt="" class="img-responsive" > 
+  <%}%>
+</div>
+  <div class="thumbnail text-center">
+    <h3><a href="/destroy/<%= item._id %>" title="點我可刪除資料">刪除資料</a></h3>   
+  </div>
+</div>

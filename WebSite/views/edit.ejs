@@ -1,0 +1,23 @@
+<div class="jumbotron">
+<div class="container">
+      <div class="row">
+        <div class="clo-xs-12  col-sm-12 ">
+          <h1 >修改名稱</h1>
+          <P class="flicker">
+          修改 DB 中對應的資料名稱，輸入完畢按下 enter 送出。
+          </P>
+        </div>  
+      </div>  
+    </div>
+</div>
+
+<div class="container">
+  <div class="thumbnail text-center">
+      <form action="/update/<%= item._id %>" method="post" accept-charset="utf-8">
+        <input type="text" name="content"  value="<%= item.name %>" />
+      </form>
+  </div>
+  <div class="thumbnail text-center">
+  <div><img src="<%= item.imgUrl %>" alt="" class="img-responsive" ></div>
+  </div>
+</div>

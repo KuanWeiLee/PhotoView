@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="clo-xs-12  col-sm-12 ">
+        <h1 >新增照片</h1>
+          <P class="flicker">
+          從網路上找一張喜歡的圖片，把他的網址輸入進去，然後取個名字，就可以按下送出鍵。
+          </P>
+        </div>  
+    </div>  
+  </div>
+</div>
+
+<form method="post" action="/addItem" class="form-horizontal">
+  <div class="col-xs-6 col-sm-5">
+      <div class="form-group">
+        <input name="name" type="text" class="form-control" id="exampleInputEmail3" placeholder="Name">
+      </div>         
+  </div>
+
+  <div class="col-xs-6 col-sm-5">
+    <input  name="imgUrl" type="text" class="form-control" id="exampleInputEmail3" placeholder="Image URL">
+  </div>     
+
+  <div class="col-xs-12 col-sm-2">
+    <button type="submit" class="btn btn-default">add item</button>
+  </div>        
+</form>      

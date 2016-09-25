@@ -1,0 +1,60 @@
+<div class="jumbotron">
+  <div class="container">
+        <div class="row  ">
+          <div class="clo-xs-12  col-sm-12">
+            <h1 >照片集</h1>
+            <P class="flicker">
+            從 MongoDB 裡將每一筆建立的資料顯示出來。
+            </P> 
+            <P class="flicker">
+            點擊照片可單獨顯示。
+            </P>
+          </div>  
+        </div>  
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row" >
+
+    <%
+    for (var index in items){
+      var item = items[index];
+      //console.log(item.imgUrl);
+      if(item.imgUrl!=null &&  item.name != '' && item.imgUrl !=''){%>
+
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="thumbnail text-center" >
+            <div class="SizeHeight">
+                <a href="/ItemView/<%= item._id%>">
+                <img src="<%= item.imgUrl %>">
+                </a>
+            </div>
+            <div class="caption">
+              <h3 class="h4"><%= item.name %></h3>
+            </div>
+          </div>
+        </div>        
+       <%
+      }else{%>
+        <div class="col-xs-12 col-sm-6 col-md-3">
+          <div class="thumbnail text-center" >
+          <div class="SizeHeight">
+            <a href="/ItemView/<%= item._id%>">
+              <img src="http://i.huffpost.com/gen/2847196/images/n-SORRY-large570.jpg">
+            </a>
+          </div>
+            <div class="caption">
+              <h3 class="h4"><%= item.name %></h3>
+            </div>
+          </div>
+        </div>        
+      <%
+      }%>
+    <% 
+    }%>
+  </div>     
+</div>  
+
+
