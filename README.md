@@ -18,6 +18,9 @@ PhotoView
 ###5. 網址列輸入 http://127.0.0.1:3000/ 
 
 ===========================
+| 基本架構流程圖 |
+|--------|
+|![image](https://github.com/KuanWeiLee/PhotoView/blob/master/screenshots/%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%A7%8B%E6%B5%81%E7%A8%8B%E5%9C%96.jpg?raw=true)|
 
 畫面截圖:
 ----------
